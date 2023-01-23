@@ -1,15 +1,31 @@
-# **Chikodi's Blackjack**
+# **Blackjacke**
 
-## **Date: January 23, 2023**
+## **Date 1/23/2023**
+
+### **By: Chikodi Merenu**
+
+#### [LinkedIn] (www.linkedin.com/in/chikodimerenu)
+
+#### [Github](https://github.com/)
 
 ---
 
-[Trello](https://trello.com/b/LyCjk28m/black-jack) [Github](https://github.com/)
-![Image] (https://crescent.edu/uploads/editor/images/Blackjack.png)
-
 ## **_Description_**
 
-## Objective
+####
+
+---
+
+### **_*Technologies Used*_**
+
+- JavaScript
+- HTML
+
+---
+
+### **_Getting Started_**
+
+#### Objective
 
 ### To beat the dealer by getting a count as close to 21 as possible, without going over 21.
 
@@ -20,3 +36,28 @@
 ## Betting
 
 ### The player will start with a set amount of "money", and with that money will choose an amount for them to bet against the dealer. As long as they have money they can keep playing against the dealer and once they run out the game is over and they busted.
+
+#### A Trello band was used to keep track of development progress and can be viewed [Trello](https://trello.com/b/LyCjk28m/black-jack) .
+
+#### The project itself was deployed and can be viewed [Github](https://github.com/).
+
+---
+
+### **_Screenshots_**
+
+#### **Image Header 1**
+
+#### ![Image](https://www.math4all.es/wp-content/uploads/2020/10/blackjack-table.jpg)
+
+---
+
+## **Future Updates:**
+
+- [ ] Betting
+- [ ] Extra options, such as doubling down
+
+---
+
+## **Credits**
+
+### **Images:** [Blackjack](google.com)
