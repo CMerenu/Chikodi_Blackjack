@@ -1,195 +1,304 @@
 ////////////////////////////////
 // Global Variables Here
-let deck = {
-  aceDiamonds: {
+let deck = [
+  (aceDiamonds = {
+    name: 'Ace of Diamonds',
     value: 1
-  },
-  twoDiamonds: {
+  }),
+  (twoDiamonds = {
+    name: 'Two of Diamonds',
     value: 2
-  },
-  threeDiamonds: {
+  }),
+  (threeDiamonds = {
+    name: 'Three of Diamonds',
     value: 3
-  },
-  fourDiamonds: {
+  }),
+  (fourDiamonds = {
+    name: 'Four of Diamonds',
     value: 4
-  },
-  fiveDiamonds: {
+  }),
+  (fiveDiamonds = {
+    name: 'Five of Diamonds',
     value: 5
-  },
-  sixDiamonds: {
+  }),
+  (sixDiamonds = {
+    name: 'Six of Diamonds',
     value: 6
-  },
-  sevenDiamonds: {
+  }),
+  (sevenDiamonds = {
+    name: 'Seven of Diamonds',
     value: 7
-  },
-  eightDiamonds: {
+  }),
+  (eightDiamonds = {
+    name: 'Eight of Diamonds',
     value: 8
-  },
-  nineDiamonds: {
+  }),
+  (nineDiamonds = {
+    name: 'Nine of Diamonds',
     value: 9
-  },
-  tenDiamonds: {
+  }),
+  (tenDiamonds = {
+    name: 'Ten of Diamonds',
     value: 10
-  },
-  jackDiamonds: {
+  }),
+  (jackDiamonds = {
+    name: 'Jack of Diamonds',
     value: 10
-  },
-  queenDiamonds: {
+  }),
+  (queenDiamonds = {
+    name: 'Queen of Diamonds',
     value: 10
-  },
-  kingDiamonds: {
+  }),
+  (kingDiamonds = {
+    name: 'King of Diamonds',
     value: 10
-  },
-  aceSpades: {
+  }),
+  (aceSpades = {
+    name: 'Ace of Spades',
     value: 1
-  },
-  twoSpades: {
+  }),
+  (twoSpades = {
+    name: 'Two of Spades',
     value: 2
-  },
-  threeSpades: {
+  }),
+  (threeSpades = {
+    name: 'Three of Spades',
     value: 3
-  },
-  fourSpades: {
+  }),
+  (fourSpades = {
+    name: 'Four of Spades',
     value: 4
-  },
-  fiveSpades: {
+  }),
+  (fiveSpades = {
+    name: 'Five of Spades',
     value: 5
-  },
-  sixSpades: {
+  }),
+  (sixSpades = {
+    name: 'Six of Spades',
     value: 6
-  },
-  sevenSpades: {
+  }),
+  (sevenSpades = {
+    name: 'Seven of Spades',
     value: 7
-  },
-  eightSpades: {
+  }),
+  (eightSpades = {
+    name: 'Eight of Spades',
     value: 8
-  },
-  nineSpades: {
+  }),
+  (nineSpades = {
+    name: 'Nine of Spades',
     value: 9
-  },
-  tenSpades: {
+  }),
+  (tenSpades = {
+    name: 'Ten of Spades',
     value: 10
-  },
-  jackSpades: {
+  }),
+  (jackSpades = {
+    name: 'Jack of Spades',
     value: 10
-  },
-  queenSpades: {
+  }),
+  (queenSpades = {
+    name: 'Queen of Spades',
     value: 10
-  },
-  kingSpades: {
+  }),
+  (kingSpades = {
+    name: 'King of Spades',
     value: 10
-  },
-  aceHearts: {
+  }),
+  (aceHearts = {
+    name: 'Ace of Hearts',
     value: 1
-  },
-  twoHearts: {
+  }),
+  (twoHearts = {
+    name: 'Two of Hearts',
     value: 2
-  },
-  threeHearts: {
+  }),
+  (threeHearts = {
+    name: 'Three of Hearts',
     value: 3
-  },
-  fourHearts: {
+  }),
+  (fourHearts = {
+    name: 'Four of Hearts',
     value: 4
-  },
-  fiveHearts: {
+  }),
+  (fiveHearts = {
+    name: 'Five of Hearts',
     value: 5
-  },
-  sixHearts: {
+  }),
+  (sixHearts = {
+    name: 'Six of Hearts',
     value: 6
-  },
-  sevenHearts: {
+  }),
+  (sevenHearts = {
+    name: 'Seven of Hearts',
     value: 7
-  },
-  eightHearts: {
+  }),
+  (eightHearts = {
+    name: 'Eight of Hearts',
     value: 8
-  },
-  nineHearts: {
+  }),
+  (nineHearts = {
+    name: 'Nine of Hearts',
     value: 9
-  },
-  tenHearts: {
+  }),
+  (tenHearts = {
+    name: 'Ten of Hearts',
     value: 10
-  },
-  jackHearts: {
+  }),
+  (jackHearts = {
+    name: 'Jack of Hearts',
     value: 10
-  },
-  queenHearts: {
+  }),
+  (queenHearts = {
+    name: 'Queen of Hearts',
     value: 10
-  },
-  kingHearts: {
+  }),
+  (kingHearts = {
+    name: 'King of Hearts',
     value: 10
-  },
-  aceClubs: {
+  }),
+  (aceClubs = {
+    name: 'Ace of Clubs',
     value: 1
-  },
-  twoClubs: {
+  }),
+  (twoClubs = {
+    name: 'Two of Clubs',
     value: 2
-  },
-  threeClubs: {
+  }),
+  (threeClubs = {
+    name: 'Three of Clubs',
     value: 3
-  },
-  fourClubs: {
+  }),
+  (fourClubs = {
+    name: 'Four of Clubs',
     value: 4
-  },
-  fiveClubs: {
+  }),
+  (fiveClubs = {
+    name: 'Five of Clubs',
     value: 5
-  },
-  sixClubs: {
+  }),
+  (sixClubs = {
+    name: 'Six of Clubs',
     value: 6
-  },
-  sevenClubs: {
+  }),
+  (sevenClubs = {
+    name: 'Seven of Clubs',
     value: 7
-  },
-  eightClubs: {
+  }),
+  (eightClubs = {
+    name: 'Eight of Clubs',
     value: 8
-  },
-  nineClubs: {
+  }),
+  (nineClubs = {
+    name: 'Nine of Clubs',
     value: 9
-  },
-  tenClubs: {
+  }),
+  (tenClubs = {
+    name: 'Ten of Clubs',
     value: 10
-  },
-  jackClubs: {
+  }),
+  (jackClubs = {
+    name: 'Jack of Clubs',
     value: 10
-  },
-  queenClubs: {
+  }),
+  (queenClubs = {
+    name: 'Queen of Clubs',
     value: 10
-  },
-  kingClubs: {
+  }),
+  (kingClubs = {
+    name: 'King of Clubs',
     value: 10
-  }
-}
+  })
+]
 console.log(deck)
+
 // let playerFirstCard = deck[i]
 // let playerSecondCard = deck[i]
-let playerCards = {}
-let dealerCards = {}
-const card = document.querySelectorAll('.card')
+let playerCards = []
+let dealerCards = []
+const dealerSum = document.getElementById('dealer-sum')
+const playerSum = document.getElementById('player-sum')
+const options = document.getElementById('options')
+const startGame = document.getElementById('start')
+const hitMe = document.getElementById('hit')
+const restartGame = document.getElementById('restart')
+const stayAmount = document.getElementById('stay')
 ////////////////////////////////
 // Functions For Game Logic Here
+
 function shuffleCards() {
   deck.sort((a, b) => 0.5 - Math.random())
 }
 function dealCards() {
-  let x = deck[0]
-  playerCards.push(x)
-  deck.shift()
-  playerCards.push(x)
-  deck.shift()
-  dealerCards.push(x)
-  deck.shift()
-  dealerCards.push(x)
-  deck.shift()
+  shuffleCards(deck)
+  // let a = deck[0]
+  // let b = deck[1]
+  // playerCards.push(a)
+  // playerCards.push(b)
+  // deck.shift(x, y)
+  // dealerCards.push(x, y)
+  // deck.shift(x, y)
+  // let c = deck[2]
+  // let d = deck[3]
+  // dealerCards.push(c)
+  // dealerCards.push(d)
+  let a = deck.shift()
+  playerCards.push(a)
+  let b = deck.shift()
+  playerCards.push(b)
+  let c = deck.shift()
+  dealerCards.push(c)
+  let d = deck.shift()
+  dealerCards.push(d)
 }
+
+// let playerCardSum = parseInt(playerCards[0].value)
 console.log(playerCards)
 console.log(dealerCards)
 
 function sumPlayerCards() {
-  for (let i = 0; i < cardValues.length; i++) {
-    let cardSum = playerCards[0].value + playerCards[1].value
-  }
-  return cardSum
+  playerCards[0].deck.value + playerCards[1].deck.value
 }
-// const restartGame(){
+function sumDealerCards() {
+  dealerCards[0].deck.value + dealerCards[1].deck.value
+}
+function hitCard() {
+  let e = deck.shift()
+  playerCards.push(e)
+}
+function hitDealerCard() {
+  let f = deck.shift()
+  playerCards.push(f)
+}
+
+console.log(sumPlayerCards)
+
+console.log(sumDealerCards)
+
+//   console.log(dealerCardSum)
+// }
+function checkWinner() {
+  if (sumPlayerCards === 21) {
+    ;(playerSum.innerText = `Blackjack!`), (options.innerText = ` `)
+  } else if (sumPlayerCards < 20) {
+    ;(playerSum.innerText = 'What do you want to do?'),
+      (options.innerText = `Hit or Stay`)
+  } else if (sumPlayerCards > 21) {
+    ;(playerSum.innerText = `You Busted!`),
+      options.innerText`Better luck next time!`
+  }
+}
+
+// // const restartGame(){
 // }
 // ////////////////////////////////
 // Event Listeners Here
+startGame.addEventListener('click', () => {
+  dealCards()
+  checkWinner()
+  startGame.classList.add('disableclick')
+})
+hitMe.addEventListener('click', () => {
+  hitCard()
+  checkWinner()
+})

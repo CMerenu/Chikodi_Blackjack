@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="project.js" charset="utf-8"></script>
   <title>Document</title>
 </head>
 <body>
@@ -16,6 +15,7 @@
     <div index = 3 class="card"></div>
     <div index = 4 class="card"></div>
   </div>
+  <div id="dealer-sum"></div>
   <div class = container>
     <div index = 5 class="card"></div>
     <div index = 6 class="card"></div>
@@ -23,9 +23,12 @@
     <div index = 8 class="card"></div>
     <div index = 9 class="card"></div>
   </div>
-  <button class = 'button' type="Hit" onclick="hitMe()">Hit Me!</button>
-  <button class = 'button' type="Hit" onclick="stay()">Stay!</button>
-  <button class = 'button' type="Start" onclick="dealCards()">Start Game</button>
-  <button class= 'button' type="Restart" onclick="restartGame()">Restart</button>
+  <div id="player-sum"></div>
+  <div id="options"></div>
+  <button class = 'button' id="start">Start Game</button>
+  <button class = 'button' id="hit">Hit Me!</button>
+  <button class = 'button' id="stay">Stay!</button>
+  <button class = 'button' id="=restart">Restart</button>
 </body>
+<script src="project.js" charset="utf-8"></script>
 </html>
