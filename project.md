@@ -37,7 +37,7 @@
 
 ### The player will start with a set amount of "money", and with that money will choose an amount for them to bet against the dealer. As long as they have money they can keep playing against the dealer and once they run out the game is over and they busted.
 
-#### A Trello band was used to keep track of development progress and can be viewed [Trello](https://trello.com/b/LyCjk28m/black-jack) .
+#### A Trello band was used to keep track of development progress and can be viewed [Trello](https://trello.com/b/dXkZMBp9/blackjack)
 
 #### The project itself was deployed and can be viewed [Github](https://github.com/).
 

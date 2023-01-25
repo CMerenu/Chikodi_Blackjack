@@ -216,6 +216,8 @@ console.log(deck)
 // let playerSecondCard = deck[i]
 let playerCards = []
 let dealerCards = []
+let playerCardsValue = []
+let dealerCardsValue = []
 const dealerSum = document.getElementById('dealer-sum')
 const playerSum = document.getElementById('player-sum')
 const options = document.getElementById('options')
@@ -229,19 +231,19 @@ const stayAmount = document.getElementById('stay')
 function shuffleCards() {
   deck.sort((a, b) => 0.5 - Math.random())
 }
+// let a = deck[0]
+// let b = deck[1]
+// playerCards.push(a)
+// playerCards.push(b)
+// deck.shift(x, y)
+// dealerCards.push(x, y)
+// deck.shift(x, y)
+// let c = deck[2]
+// let d = deck[3]
+// dealerCards.push(c)
+// dealerCards.push(d)
 function dealCards() {
   shuffleCards(deck)
-  // let a = deck[0]
-  // let b = deck[1]
-  // playerCards.push(a)
-  // playerCards.push(b)
-  // deck.shift(x, y)
-  // dealerCards.push(x, y)
-  // deck.shift(x, y)
-  // let c = deck[2]
-  // let d = deck[3]
-  // dealerCards.push(c)
-  // dealerCards.push(d)
   let a = deck.shift()
   playerCards.push(a)
   let b = deck.shift()
@@ -251,16 +253,30 @@ function dealCards() {
   let d = deck.shift()
   dealerCards.push(d)
 }
+// function dealCardsValue() {
+//   shuffleCards(deck)
+//   let a = deck.shift().value
+//   playerCardsValue.push(a)
+//   let b = deck.shift().value
+//   playerCardsValue.push(b)
+//   let c = deck.shift().value
+//   dealerCardsValue.push(c)
+//   let d = deck.shift().value
+//   dealerCardsValue.push(d).value
+// }
 
 // let playerCardSum = parseInt(playerCards[0].value)
 console.log(playerCards)
 console.log(dealerCards)
 
-function sumPlayerCards() {
-  playerCards[0].deck.value + playerCards[1].deck.value
+// console.log(playerCardsValue)
+// console.log(dealerCardsValue)
+
+const sumPlayerCards {
+  parseInt(playerCards.value) + playerCards.value
 }
-function sumDealerCards() {
-  dealerCards[0].deck.value + dealerCards[1].deck.value
+let sumDealerCards = {
+  dealerCards.value + dealerCards.value
 }
 function hitCard() {
   let e = deck.shift()
@@ -275,20 +291,33 @@ console.log(sumPlayerCards)
 
 console.log(sumDealerCards)
 
-//   console.log(dealerCardSum)
-// }
+  console.log(dealerCardSum)
+
 function checkWinner() {
   if (sumPlayerCards === 21) {
-    ;(playerSum.innerText = `Blackjack!`), (options.innerText = ` `)
+    ;(playerSum.innerText = `Blackjack!`), (options.innerText = `You Win!`)
   } else if (sumPlayerCards < 20) {
     ;(playerSum.innerText = 'What do you want to do?'),
       (options.innerText = `Hit or Stay`)
   } else if (sumPlayerCards > 21) {
     ;(playerSum.innerText = `You Busted!`),
-      options.innerText`Better luck next time!`
+      (options.innerText = `Better luck next time!`)
   }
 }
 
+function checkDealerWinner() {
+  if (sumDealerCards < sumPlayerCards) {
+    hitDealerCard()
+  } else if (sumDealerCards > sumPlayerCards && sumDealerCards < 21) {
+    ;(playerSum.innerText = `Dealer Win!`),
+      (options.innerText = 'Better luck next time!')
+  } else if (sumDealerCards === 21) {
+    ;(playerSum.innerText = 'Dealer Blackjack'),
+      (options.innerText = 'Better luck next time!')
+  } else if (sumDealerCards > 21) {
+    ;(playerSum.innerText = 'Dealer Busted'), (options.innerText = 'You Win!')
+  }
+}
 // // const restartGame(){
 // }
 // ////////////////////////////////
