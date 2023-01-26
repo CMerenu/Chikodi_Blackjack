@@ -3,7 +3,7 @@
 let deck = [
   {
     name: 'Ace',
-    suit: 'Diamonds',
+    suit: 'Hearts',
     value: 1,
     img: url(
       'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/hearts/hearts-A.svg'
@@ -11,7 +11,7 @@ let deck = [
   },
   {
     name: 'Two',
-    suit: 'Diamonds',
+    suit: 'Hearts',
     value: 2,
     img: url(
       'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/hearts/hearts-r02.svg'
@@ -19,7 +19,7 @@ let deck = [
   },
   {
     name: 'Three',
-    suit: 'Diamond',
+    suit: 'Hearts',
     value: 3,
     img: url(
       'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/hearts/hearts-r03.svg'
@@ -27,7 +27,7 @@ let deck = [
   },
   {
     name: 'Four',
-    suit: 'Diamonds',
+    suit: 'Hearts',
     value: 4,
     img: url(
       'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/hearts/hearts-r04.svg'
@@ -35,7 +35,7 @@ let deck = [
   },
   {
     name: 'Five',
-    suit: 'Diamonds',
+    suit: 'Hearts',
     value: 5,
     img: url(
       'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/hearts/hearts-r05.svg'
@@ -43,7 +43,7 @@ let deck = [
   },
   {
     name: 'Six',
-    suit: 'Diamonds',
+    suit: 'Hearts',
     value: 6,
     img: url(
       'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/hearts/hearts-r06.svg'
@@ -51,7 +51,7 @@ let deck = [
   },
   {
     name: 'Seven',
-    suit: 'Diamonds',
+    suit: 'Hearts',
     value: 7,
     img: url(
       'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/hearts/hearts-r07.svg'
@@ -59,7 +59,7 @@ let deck = [
   },
   {
     name: 'Eight',
-    suit: 'Diamonds',
+    suit: 'Hearts',
     value: 8,
     img: url(
       'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/hearts/hearts-r08.svg'
@@ -67,7 +67,7 @@ let deck = [
   },
   {
     name: 'Nine',
-    suit: 'Diamonds',
+    suit: 'Hearts',
     value: 9,
     img: url(
       'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/hearts/hearts-r09.svg'
@@ -75,7 +75,7 @@ let deck = [
   },
   {
     name: 'Ten',
-    suit: 'Diamonds',
+    suit: 'Hearts',
     value: 10,
     img: url(
       'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/hearts/hearts-r10.svg'
@@ -83,7 +83,7 @@ let deck = [
   },
   {
     name: 'Jack',
-    suit: 'Diamonds',
+    suit: 'Hearts',
     value: 10,
     img: url(
       'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/hearts/hearts-J.svg'
@@ -91,7 +91,7 @@ let deck = [
   },
   {
     name: 'Queen',
-    suit: 'Diamonds',
+    suit: 'Hearts',
     value: 10,
     img: url(
       'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/hearts/hearts-Q.svg'
@@ -99,7 +99,7 @@ let deck = [
   },
   {
     name: 'King',
-    suit: 'Diamonds',
+    suit: 'Hearts',
     value: 10,
     img: url(
       'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/hearts/hearts-K.svg'
@@ -107,81 +107,107 @@ let deck = [
   },
   {
     name: 'Ace',
-    suit: 'Hearts',
+    suit: 'Diamonds',
     value: 1,
-    img: ''
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/diamonds/diamonds-A.svg'
+    )
   },
   {
     name: 'Two',
-    suit: 'Hearts',
+    suit: 'Diamonds',
     value: 2,
-    img: ''
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/diamonds/diamonds-r02.svg'
+    )
   },
   {
     name: 'Three',
-    suit: 'Hearts',
+    suit: 'Diamonds',
     value: 3,
-    img: ''
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/diamonds/diamonds-r03.svg'
+    )
   },
   {
     name: 'Four',
-    suit: 'Hearts',
+    suit: 'Diamonds',
     value: 4,
-    img: ' '
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/diamonds/diamonds-r04.svg'
+    )
   },
   {
     name: 'Five',
-    suit: 'Hearts',
+    suit: 'Diamonds',
     value: 5,
-    img: ' '
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/diamonds/diamonds-r05.svg'
+    )
   },
   {
     name: 'Six',
-    suit: 'Hearts',
+    suit: 'Diamonds',
     value: 6,
-    img: ' '
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/diamonds/diamonds-r06.svg'
+    )
   },
   {
     name: 'Seven',
-    suit: 'Hearts',
+    suit: 'Diamonds',
     value: 7,
-    img: ' '
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/diamonds/diamonds-r07.svg'
+    )
   },
   {
     name: 'Eight',
-    suit: 'Hearts',
+    suit: 'Diamonds',
     value: 8,
-    img: ''
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/diamonds/diamonds-r08.svg'
+    )
   },
   {
     name: 'Nine',
-    suit: 'Hearts',
+    suit: 'Diamonds',
     value: 9,
-    img: ' '
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/diamonds/diamonds-r09.svg'
+    )
   },
   {
     name: 'Ten',
-    suit: 'Hearts',
+    suit: 'Diamonds',
     value: 10,
-    img: ' '
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/diamonds/diamonds-r10.svg'
+    )
   },
   {
     name: 'Jack',
-    suit: 'Hearts',
+    suit: 'Diamonds',
     value: 10,
-    img: ''
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/diamonds/diamonds-J.svg'
+    )
   },
   {
     name: 'Queen',
-    suit: 'Hearts',
+    suit: 'Diamonds',
     value: 10,
-    img: ' '
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/diamonds/diamonds-Q.svg'
+    )
   },
   {
     name: 'King',
-    suit: 'Hearts',
+    suit: 'Diamonds',
     value: 10,
-    img: ' '
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/diamonds/diamonds-K.svg'
+    )
   },
   {
     name: 'Ace',
