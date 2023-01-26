@@ -322,6 +322,7 @@ let playerScore = 0
 let dealerScore = 0
 const dealerSum = document.getElementById('dealer-sum')
 const playerSum = document.getElementById('player-sum')
+const playerStatus = document.getElementById('player-status')
 const options = document.getElementById('options')
 const startGame = document.getElementById('start')
 const hitMe = document.getElementById('hit')
@@ -349,18 +350,35 @@ console.log(playerCards)
 console.log(dealerCards)
 
 const sumPlayerCards = () => {
-  let playerScore = 0
-  for (let i = 0; i < playerCards.length; i++) {
-    playerScore += playerCards[i].value
+  // let playerScore = 0
+  if (playerCards.length === 2) {
+    for (let i = 0; i < playerCards.length; i++) {
+      playerScore += playerCards[i].value
+    }
+    playerSum.innerText = playerScore
+  } else {
+    let recentCard = playerCards.slice(-1)
+    playerScore += recentCard[0].value
+    playerSum.innerText = playerScore
+    // console.log(recentCard)
   }
-  console.log(playerScore, 'playerScore')
+  // playerSum.innerText = playerScore
+  // console.log(playerScore, 'playerScore')
+  // checkWinner()
 }
+
 const sumDealerCards = () => {
-  let dealerScore = 0
-  for (let i = 0; i < dealerCards.length; i++) {
-    dealerScore += dealerCards[i].value
+  if (dealerCards.length === 2) {
+    for (let i = 0; i < dealerCards.length; i++) {
+      dealerScore += dealerCards[i].value
+    }
+    dealerSum.innerText = dealerScore
+  } else {
+    let dealerRecentCard = dealerCards.slice(-1)
+    dealerScore += dealerRecentCard[0].value
+    dealerSum.innerText = dealerScore
+    // console.log(dealerRecentCard)
   }
-  console.log(dealerScore, 'playerScore')
 }
 
 function hitCard() {
@@ -375,29 +393,32 @@ function hitDealerCard() {
 // console.log(sumPlayerCards())
 // console.log(sumDealerCards())
 
-function checkWinner() {
-  if (sumPlayerCards === 21) {
-    ;(playerSum.innerText = `Blackjack!`), (options.innerText = `You Win!`)
-  } else if (sumPlayerCards < 20) {
-    ;(playerSum.innerText = 'What do you want to do?'),
-      (options.innerText = `Hit or Stay`)
-  } else if (sumPlayerCards > 21) {
-    ;(playerSum.innerText = `You Busted!`),
-      (options.innerText = `Better luck next time!`)
+const checkWinner = () => {
+  console.log(playerScore)
+  if (playerScore === 21) {
+    playerStatus.innerText = 'Blackjack!'
+    options.innerText = 'You Win!'
+  } else if (playerScore < 21) {
+    playerStatus.innerText = 'What do you want to do?'
+    options.innerText = 'Hit or Stay!'
+  } else if (playerScore > 21) {
+    playerStatus.innerText = "You've Busted!"
+    options.innerText = 'Better luck next time!'
   }
 }
 
 function checkDealerWinner() {
-  if (sumDealerCards < sumPlayerCards) {
+  if (dealerScore < playerScore) {
     hitDealerCard()
-  } else if (sumDealerCards > sumPlayerCards && sumDealerCards < 21) {
-    ;(playerSum.innerText = `Dealer Win!`),
-      (options.innerText = 'Better luck next time!')
-  } else if (sumDealerCards === 21) {
-    ;(playerSum.innerText = 'Dealer Blackjack'),
-      (options.innerText = 'Better luck next time!')
-  } else if (sumDealerCards > 21) {
-    ;(playerSum.innerText = 'Dealer Busted'), (options.innerText = 'You Win!')
+  } else if (dealerScore > playerScore && dealerScore < 21) {
+    playerStatus.innerText = 'Dealer Win!'
+    options.innerText = 'Better luck next time!'
+  } else if (dealerScore === 21) {
+    playerStatus.innerText = 'Dealer Blackjack'
+    options.innerText = 'Better luck next time!'
+  } else if (dealerScore > 21) {
+    playerStatus.innerText = 'Dealer Busted'
+    options.innerText = 'You Win!'
   }
 }
 // // const restartGame(){

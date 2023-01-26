@@ -10,7 +10,7 @@ h1{
   color: white;
   font-size: 50px;
 }
-.dealer-card{
+/* .dealer-card{
   background-color: black;
   opacity: .5;
   height: 15px;
@@ -19,10 +19,20 @@ h1{
   background-color: black;
   opacity: .5;
   height: 15px;
-}
+} */
 #dealer-sum{
-
+color: red;
+font-size: 35px;
 }
 #player-sum{
-  
+color: white;
+font-size: 35px;
+}
+#player-status{
+  color: blue;
+  font-size: 25px;
+}
+#options{
+  color: lightgreen;
+font-size: 25px;
 }
