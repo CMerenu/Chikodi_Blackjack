@@ -327,7 +327,7 @@ const options = document.getElementById('options')
 const startGame = document.getElementById('start')
 const hitMe = document.getElementById('hit')
 const restartGame = document.getElementById('restart')
-const stayAmount = document.getElementById('stay')
+const stay = document.getElementById('stay')
 ////////////////////////////////
 // Functions For Game Logic Here
 
@@ -386,8 +386,8 @@ function hitCard() {
   playerCards.push(e)
 }
 function hitDealerCard() {
-  let f = deck.shift()
-  playerCards.push(f)
+  let e = deck.shift()
+  dealerCards.push(e)
 }
 
 // console.log(sumPlayerCards())
@@ -398,6 +398,12 @@ const checkWinner = () => {
   if (playerScore === 21) {
     playerStatus.innerText = 'Blackjack!'
     options.innerText = 'You Win!'
+  } else if (dealerScore === 21 && playerScore < 21) {
+    playerStatus.innerText = 'Dealer Win!'
+    options.innerText = 'Better luck next time!'
+  } else if (playerScore === 21 && dealerScore === 21) {
+    playerStatus.innerText = ' Push!'
+    options.innerText = 'Dealer and Player Wins'
   } else if (playerScore < 21) {
     playerStatus.innerText = 'What do you want to do?'
     options.innerText = 'Hit or Stay!'
@@ -410,6 +416,8 @@ const checkWinner = () => {
 function checkDealerWinner() {
   if (dealerScore < playerScore) {
     hitDealerCard()
+    console.log(dealerCards)
+    console.log(dealerScore)
   } else if (dealerScore > playerScore && dealerScore < 21) {
     playerStatus.innerText = 'Dealer Win!'
     options.innerText = 'Better luck next time!'
@@ -419,6 +427,9 @@ function checkDealerWinner() {
   } else if (dealerScore > 21) {
     playerStatus.innerText = 'Dealer Busted'
     options.innerText = 'You Win!'
+  } else if (dealerScore === playerScore) {
+    playerStatus.innerText = ' Push!'
+    options.innerText = 'Dealer and Player Wins'
   }
 }
 // // const restartGame(){
@@ -439,3 +450,9 @@ hitMe.addEventListener('click', () => {
   sumPlayerCards()
   checkWinner()
 })
+stay.addEventListener('click', () => {
+  sumDealerCards()
+  checkDealerWinner()
+  hitMe.classList.add('disableclick')
+})
+// restartGame.addEventListener
