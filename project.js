@@ -5,79 +5,105 @@ let deck = [
     name: 'Ace',
     suit: 'Diamonds',
     value: 1,
-    img: ''
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/hearts/hearts-A.svg'
+    )
   },
   {
     name: 'Two',
     suit: 'Diamonds',
     value: 2,
-    img: ''
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/hearts/hearts-r02.svg'
+    )
   },
   {
     name: 'Three',
     suit: 'Diamond',
     value: 3,
-    img: ''
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/hearts/hearts-r03.svg'
+    )
   },
   {
     name: 'Four',
     suit: 'Diamonds',
     value: 4,
-    img: ' '
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/hearts/hearts-r04.svg'
+    )
   },
   {
     name: 'Five',
     suit: 'Diamonds',
     value: 5,
-    img: ' '
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/hearts/hearts-r05.svg'
+    )
   },
   {
     name: 'Six',
     suit: 'Diamonds',
     value: 6,
-    img: ' '
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/hearts/hearts-r06.svg'
+    )
   },
   {
     name: 'Seven',
     suit: 'Diamonds',
     value: 7,
-    img: ' '
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/hearts/hearts-r07.svg'
+    )
   },
   {
     name: 'Eight',
     suit: 'Diamonds',
     value: 8,
-    img: ''
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/hearts/hearts-r08.svg'
+    )
   },
   {
     name: 'Nine',
     suit: 'Diamonds',
     value: 9,
-    img: ' '
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/hearts/hearts-r09.svg'
+    )
   },
   {
     name: 'Ten',
     suit: 'Diamonds',
     value: 10,
-    img: ' '
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/hearts/hearts-r10.svg'
+    )
   },
   {
     name: 'Jack',
     suit: 'Diamonds',
     value: 10,
-    img: ''
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/hearts/hearts-J.svg'
+    )
   },
   {
     name: 'Queen',
     suit: 'Diamonds',
     value: 10,
-    img: ' '
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/hearts/hearts-Q.svg'
+    )
   },
   {
     name: 'King',
     suit: 'Diamonds',
     value: 10,
-    img: ' '
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/hearts/hearts-K.svg'
+    )
   },
   {
     name: 'Ace',
@@ -374,7 +400,9 @@ const sumDealerCards = () => {
     }
     dealerSum.innerText = dealerScore
   } else {
+    console.log(dealerScore)
     let dealerRecentCard = dealerCards.slice(-1)
+    console.log(dealerRecentCard)
     dealerScore += dealerRecentCard[0].value
     dealerSum.innerText = dealerScore
     // console.log(dealerRecentCard)
@@ -390,9 +418,6 @@ function hitDealerCard() {
   dealerCards.push(e)
 }
 
-// console.log(sumPlayerCards())
-// console.log(sumDealerCards())
-
 const checkWinner = () => {
   console.log(playerScore)
   if (playerScore === 21) {
@@ -401,7 +426,7 @@ const checkWinner = () => {
   } else if (dealerScore === 21 && playerScore < 21) {
     playerStatus.innerText = 'Dealer Win!'
     options.innerText = 'Better luck next time!'
-  } else if (playerScore === 21 && dealerScore === 21) {
+  } else if (playerScore === dealerScore) {
     playerStatus.innerText = ' Push!'
     options.innerText = 'Dealer and Player Wins'
   } else if (playerScore < 21) {
@@ -416,8 +441,10 @@ const checkWinner = () => {
 function checkDealerWinner() {
   if (dealerScore < playerScore) {
     hitDealerCard()
-    console.log(dealerCards)
-    console.log(dealerScore)
+    // console.log(dealerCards)
+    // console.log(dealerScore)
+    // } else if (dealerScore < playerScore) {
+    //   hitDealerCard()
   } else if (dealerScore > playerScore && dealerScore < 21) {
     playerStatus.innerText = 'Dealer Win!'
     options.innerText = 'Better luck next time!'
@@ -455,4 +482,6 @@ stay.addEventListener('click', () => {
   checkDealerWinner()
   hitMe.classList.add('disableclick')
 })
-// restartGame.addEventListener
+// restartGame.addEventListener('click', () => {
+//   reset
+// })
