@@ -1,3 +1,28 @@
 .disableclick{
   pointer-events: none;
 }
+body{
+  background-image:url(https://cdn2.softswiss.net/n1casino/b/infin/BlackjackLow.jpg);
+  background-size: auto;
+}
+h1{
+  text-align: center;
+  color: white;
+  font-size: 50px;
+}
+.dealer-card{
+  background-color: black;
+  opacity: .5;
+  height: 15px;
+}
+.player-card{
+  background-color: black;
+  opacity: .5;
+  height: 15px;
+}
+#dealer-sum{
+
+}
+#player-sum{
+  
+}
