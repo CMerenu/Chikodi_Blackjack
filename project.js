@@ -432,6 +432,16 @@ const startGame = document.getElementById('start')
 const hitMe = document.getElementById('hit')
 const restartGame = document.getElementById('restart')
 const stay = document.getElementById('stay')
+const deal1 = document.getElementById('dealer-card1')
+const deal2 = document.getElementById('dealer-card2')
+const deal3 = document.getElementById('dealer-card3')
+const deal4 = document.getElementById('dealer-card4')
+const deal5 = document.getElementById('dealer-card5')
+const play1 = document.getElementById('player-card1')
+const play2 = document.getElementById('player-card2')
+const play3 = document.getElementById('player-card3')
+const play4 = document.getElementById('player-card4')
+const play5 = document.getElementById('player-card5')
 ////////////////////////////////
 // Functions For Game Logic Here
 
