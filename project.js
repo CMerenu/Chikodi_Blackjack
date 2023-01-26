@@ -213,157 +213,209 @@ let deck = [
     name: 'Ace',
     suit: 'Spades',
     value: 1,
-    img: ''
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/spades/spades-A.svg'
+    )
   },
   {
     name: 'Two',
     suit: 'Spades',
     value: 2,
-    img: ''
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/spades/spades-r02.svg'
+    )
   },
   {
     name: 'Three',
     suit: 'Spades',
     value: 3,
-    img: ''
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/spades/spades-r03.svg'
+    )
   },
   {
     name: 'Four',
     suit: 'Spades',
     value: 4,
-    img: ' '
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/spades/spades-r04.svg'
+    )
   },
   {
     name: 'Five',
     suit: 'Spades',
     value: 5,
-    img: ' '
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/spades/spades-r05.svg'
+    )
   },
   {
     name: 'Six',
     suit: 'Spades',
     value: 6,
-    img: ' '
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/spades/spades-r07.svg'
+    )
   },
   {
     name: 'Seven',
     suit: 'Spades',
     value: 7,
-    img: ' '
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/spades/spades-r07.svg'
+    )
   },
   {
     name: 'Eight',
     suit: 'Spades',
     value: 8,
-    img: ''
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/spades/spades-r08.svg'
+    )
   },
   {
     name: 'Nine',
     suit: 'Spades',
     value: 9,
-    img: ' '
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/spades/spades-r09.svg'
+    )
   },
   {
     name: 'Ten',
     suit: 'Spades',
     value: 10,
-    img: ' '
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/spades/spades-r10.svg'
+    )
   },
   {
     name: 'Jack',
     suit: 'Spades',
     value: 10,
-    img: ''
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/spades/spades-J.svg'
+    )
   },
   {
     name: 'Queen',
     suit: 'Spades',
     value: 10,
-    img: ' '
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/spades/spades-Q.svg'
+    )
   },
   {
     name: 'King',
     suit: 'Spades',
     value: 10,
-    img: ' '
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/spades/spades-K.svg'
+    )
   },
   {
     name: 'Ace',
     suit: 'Clubs',
     value: 1,
-    img: ''
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/clubs/clubs-A.svg'
+    )
   },
   {
     name: 'Two',
     suit: 'Clubs',
     value: 2,
-    img: ''
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/clubs/clubs-r02.svg'
+    )
   },
   {
     name: 'Three',
     suit: 'Clubs',
     value: 3,
-    img: ''
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/clubs/clubs-r03.svg'
+    )
   },
   {
     name: 'Four',
     suit: 'Clubs',
     value: 4,
-    img: ' '
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/clubs/clubs-r04.svg'
+    )
   },
   {
     name: 'Five',
     suit: 'Clubs',
     value: 5,
-    img: ' '
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/clubs/clubs-r05.svg'
+    )
   },
   {
     name: 'Six',
     suit: 'Clubs',
     value: 6,
-    img: ' '
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/clubs/clubs-r06.svg'
+    )
   },
   {
     name: 'Seven',
     suit: 'Clubs',
     value: 7,
-    img: ' '
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/clubs/clubs-r07.svg'
+    )
   },
   {
     name: 'Eight',
     suit: 'Clubs',
     value: 8,
-    img: ''
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/clubs/clubs-r08.svg'
+    )
   },
   {
     name: 'Nine',
     suit: 'Clubs',
     value: 9,
-    img: ' '
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/clubs/clubs-r09.svg'
+    )
   },
   {
     name: 'Ten',
     suit: 'Clubs',
     value: 10,
-    img: ' '
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/clubs/clubs-r10.svg'
+    )
   },
   {
     name: 'Jack',
     suit: 'Clubs',
     value: 10,
-    img: ''
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/clubs/clubs-J.svg'
+    )
   },
   {
     name: 'Queen',
     suit: 'Clubs',
     value: 10,
-    img: ' '
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/clubs/clubs-Q.svg'
+    )
   },
   {
     name: 'King',
     suit: 'Clubs',
     value: 10,
-    img: ' '
+    img: url(
+      'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/clubs/clubs-K.svg'
+    )
   }
 ]
 console.log(deck)
