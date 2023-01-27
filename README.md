@@ -4,7 +4,7 @@
 
 ### **By: Chikodi Merenu**
 
-#### [LinkedIn] (www.linkedin.com/in/chikodimerenu)
+#### [LinkedIn](www.linkedin.com/in/chikodimerenu)
 
 #### [Github](https://github.com/)
 
