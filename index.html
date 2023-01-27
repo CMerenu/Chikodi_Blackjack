@@ -4,36 +4,20 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="instruction_style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap" rel="stylesheet">
-  <title>Welcome to Blackjack</title>
+  <title>Welcome to Blackjack!</title>
 </head>
 <body>
-  <h1>Blackjack</h1>
-  <div class= "dealer-container">
-    <div id="dealer-card1"></div>
-    <div id="dealer-card2"></div>
-    <div id="dealer-card3"></div>
-    <div id="dealer-card4"></div>
-    <div id="dealer-card5"></div>
+  <div>
+    <h1>Blackjack!</h1>
+    <h3>By Chikodi Merenu</h3>
+    <p>The player is going to be dealt two cards and will see one of the dealer cards. With each card representing a different value ( A - 1, Jack - 10, Queen - 10, King - 10) the player will be given two options, (Hit or stand). When the player hits, they will be dealt an additional card to add to their Total. The player can hit 3 times, bringing his total to 5 cards , but will automatically lose if their total “busts” or hits any number above 21. Once the player choses to stand, the dealer will flip his card thats facing down and then will try to beat the player total by hitting on his own cards. If the dealer busts, the player wins, and if the dealer matches the player's number than it will be a push.</p>
+    <a href="./game.html">
+      <button class = 'button' id="Play">Lets Play!</button>
+    </a>
   </div>
-  <div id="dealer-sum">dealer sum</div>
-  <div class = "player-container">
-    <div id="player-card1"></div>
-    <div id="player-card2"></div>
-    <div id="player-card3"></div>
-    <div id="player-card4"></div>
-    <div id="player-card5"></div> -->
-  </div>
-  <div id="player-sum">Sum</div>
-  <div id="player-status">status</div>
-  <div id="options">options</div>
-  <button class = 'button' id="start">Start Game</button>
-  <button class = 'button' id="hit">Hit Me!</button>
-  <button class = 'button' id="stay">Stay!</button>
-  <button class = 'button' id="=restart">Restart</button>
 </body>
-<script src="project.js" charset="utf-8"></script>
 </html>

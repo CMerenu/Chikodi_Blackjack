@@ -93,3 +93,15 @@ width: 100px;
     width: 100px;
     }
     
+button{
+  opacity: 55%;
+  font-family: 'Roboto Condensed', sans-serif;
+  height: 30px;
+  width: 75px;
+  /* color: ; */
+}
+
+.card img{
+  height: 125px;
+  width: 100px;
+}

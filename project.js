@@ -327,13 +327,13 @@ const options = document.getElementById('options')
 const startGame = document.getElementById('start')
 const hitMe = document.getElementById('hit')
 const restartGame = document.getElementById('restart')
-// .restartGame.addEventListener('click', () => {
-//   location.reload()
-// })
+restartGame.addEventListener('click', () => {
+  location.reload()
+})
 const stay = document.getElementById('stay')
 const deal1 = document.getElementById('dealer-card1')
 if (deal1 && deal1.style) {
-  deal1.style.height = '75px'
+  deal1.style.height = '125px'
   deal1.style.width = '100px'
   deal1.style.background = 'white'
 }
@@ -460,19 +460,19 @@ addDealerPicture5 = () => {
 
 function dealCards() {
   shuffleCards(deck)
+  addPlayerPicture1()
   let a = deck.shift()
   playerCards.push(a)
-  addPlayerPicture1()
+  addPlayerPicture2()
   let b = deck.shift()
   playerCards.push(b)
-  addPlayerPicture2()
+  addDealerPicture1()
   let c = deck.shift()
   dealerCards.push(c)
-  addDealerPicture1()
+  addDealerPicture2()
   let d = deck.shift()
   dealerCards.push(d)
   // THIS CARD IS GOING TO BE THE BACK!!!
-  addDealerPicture2()
   console.log(deck)
 }
 
@@ -499,6 +499,7 @@ const sumPlayerCards = () => {
 
 const sumDealerCards = () => {
   if (dealerCards.length === 2) {
+    dealerScore = 0
     for (let i = 0; i < dealerCards.length; i++) {
       dealerScore += dealerCards[i].value
     }
@@ -520,6 +521,10 @@ function hitCard() {
 function hitDealerCard() {
   let e = deck.shift()
   dealerCards.push(e)
+  console.log(dealerCards.length)
+  console.log(dealerScore)
+  console.log(dealerCards)
+  sumDealerCards()
 }
 
 const checkWinner = () => {
@@ -543,16 +548,12 @@ const checkWinner = () => {
 }
 
 function checkDealerWinner() {
-  if (dealerScore < playerScore) {
+  while (dealerScore < playerScore) {
     hitDealerCard()
-    // console.log(dealerCards)
-    // console.log(dealerScore)
-    // } else if (dealerScore < playerScore) {
-    //   hitDealerCard()
   }
-  if (dealerScore < playerScore) {
-    hitDealerCard()
-  } else if (dealerScore > playerScore && dealerScore < 21) {
+  // if (dealerScore < playerScore) {
+  // hitDealerCard()
+  if (dealerScore > playerScore && dealerScore < 21) {
     playerStatus.innerText = 'Dealer Win!'
     options.innerText = 'Better luck next time!'
   } else if (dealerScore === 21) {
@@ -585,8 +586,8 @@ hitMe.addEventListener('click', () => {
   checkWinner()
 })
 stay.addEventListener('click', () => {
-  sumDealerCards()
   checkDealerWinner()
+  // sumDealerCards()
   hitMe.classList.add('disableclick')
 })
 // restartGame.addEventListener('click', () => {
