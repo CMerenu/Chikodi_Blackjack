@@ -48,7 +48,11 @@
 
 #### ![Image](https://trello.com/1/cards/63d405aa079c9c0067511d6e/attachments/63d408665759044dabbff011/previews/63d408685759044dabbff4ce/download/Screen_Shot_2023-01-27_at_11.22.05_AM.png)
 
-#### ![Image]()
+#### **Game play Screens**
+
+#### ![Image](https://trello.com/1/cards/63d4116fda1a8c9daca292bd/attachments/63d41188eddfb56bac4c009a/previews/63d4118aeddfb56bac4c00a7/download/Screen_Shot_2023-01-27_at_12.00.16_PM.png)
+
+#### ![Image](https://trello.com/1/cards/63d41176f015d6fa917a268d/attachments/63d4119d1554968b8e81a8ea/previews/63d4119f1554968b8e81a956/download/Screen_Shot_2023-01-27_at_12.00.32_PM.png)
 
 ---
 
@@ -65,3 +69,7 @@
 ## **Credits**
 
 ### **Images:** [Blackjack](google.com)
+
+### **Card Images:** [Cards](https://github.com/NobodysLackey/card-deck)
+
+### **Background Image:** [Casino Table](https://cdn2.softswiss.net/n1casino/b/infin/BlackjackLow.jpg)
