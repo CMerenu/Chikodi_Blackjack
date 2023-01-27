@@ -37,9 +37,48 @@ font-size: 35px;
 font-size: 25px;
 }
 .dealer-container{
-  background-color: white;
-  
+  /* background-color: white; */
+  display: flex;
+  justify-content: space-between;
+  width: 800px;
+  align-items: center;
 }
 .player-container{
-  background-color: white;
+  /* background-color: white; */
+  display: flex;
+  justify-content: space-between;
+  width: 800px;
+  align-items: center;
 }
+#dealer-card1{
+/* background-color: white; */
+height: 125px;
+width: 100px;
+display: flex;
+}
+/* #dealer-card2{
+  background-color: white;
+height: 125px;
+width: 100px;
+}
+#dealer-card3{
+  background-color: white;
+height: 125px;
+width: 100px;
+}
+#dealer-card4{
+  background-color: white;
+height: 125px;
+width: 100px;
+}
+#dealer-card5{
+  background-color: white;
+height: 125px;
+width: 100px;
+} */ */
+#player-card1{
+  /* background-color: white; */
+  height: 125px;
+  width: 100px;
+  display: flex;
+  }

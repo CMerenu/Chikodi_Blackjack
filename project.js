@@ -332,15 +332,27 @@ const restartGame = document.getElementById('restart')
 // })
 const stay = document.getElementById('stay')
 const deal1 = document.getElementById('dealer-card1')
-const deal2 = document.getElementById('dealer-card2')
-const deal3 = document.getElementById('dealer-card3')
-const deal4 = document.getElementById('dealer-card4')
-const deal5 = document.getElementById('dealer-card5')
+if (deal1 && deal1.style) {
+  deal1.style.height = '125px'
+  deal1.style.width = '100px'
+  deal1.style.background = 'white'
+}
+// const deal2 = document.getElementById('dealer-card2')
+// const deal3 = document.getElementById('dealer-card3')
+// const deal4 = document.getElementById('dealer-card4')
+// const deal5 = document.getElementById('dealer-card5')
 const play1 = document.getElementById('player-card1')
-const play2 = document.getElementById('player-card2')
-const play3 = document.getElementById('player-card3')
-const play4 = document.getElementById('player-card4')
-const play5 = document.getElementById('player-card5')
+if (play1 && play1.style) {
+  play1.style.height = '125px'
+  play1.style.width = '100px'
+  play1.style.background = 'white'
+}
+// const play2 = document.getElementById('player-card2')
+// const play3 = document.getElementById('player-card3')
+// const play4 = document.getElementById('player-card4')
+// const play5 = document.getElementById('player-card5')
+const dealerContainer = document.getElementById('dealer-container')
+const playerContainer = document.getElementById('player-container')
 ////////////////////////////////
 // Functions For Game Logic Here
 
@@ -354,27 +366,27 @@ addPlayerPicture1 = () => {
   play1.appendChild(img)
 }
 
-addPlayerPicture2 = () => {
-  var img = new Image()
-  img.src = deck[0].img
-  play2.appendChild(img)
-}
-addPlayerPicture3 = () => {
-  var img = new Image()
-  img.src = deck[0].img
-  play3.appendChild(img)
-}
+// addPlayerPicture2 = () => {
+//   var img = new Image()
+//   img.src = deck[0].img
+//   play2.appendChild(img)
+// }
+// addPlayerPicture3 = () => {
+//   var img = new Image()
+//   img.src = deck[0].img
+//   play3.appendChild(img)
+// }
 
-addPlayerPicture4 = () => {
-  var img = new Image()
-  img.src = deck[0].img
-  play4.appendChild(img)
-}
-addPlayerPicture5 = () => {
-  var img = new Image()
-  img.src = deck[0].img
-  play5.appendChild(img)
-}
+// addPlayerPicture4 = () => {
+//   var img = new Image()
+//   img.src = deck[0].img
+//   play4.appendChild(img)
+// }
+// addPlayerPicture5 = () => {
+//   var img = new Image()
+//   img.src = deck[0].img
+//   play5.appendChild(img)
+// }
 
 addDealerPicture1 = () => {
   var img = new Image()
@@ -382,27 +394,38 @@ addDealerPicture1 = () => {
   deal1.appendChild(img)
 }
 
-addDealerPicture2 = () => {
-  var img = new Image()
-  img.src = deck[0].img
-  deal2.appendChild(img)
-}
-addDealerPicture3 = () => {
-  var img = new Image()
-  img.src = deck[0].img
-  deal3.appendChild(img)
-}
+// addDealerPicture2 = () => {
+//   var img = new Image()
+//   img.src = deck[0].img
+//   deal2.appendChild(img)
+// }
+// addDealerPicture3 = () => {
+//   var img = new Image()
+//   img.src = deck[0].img
+//   deal3.appendChild(img)
+// }
 
-addDealerPicture4 = () => {
-  var img = new Image()
-  img.src = deck[0].img
-  deal4.appendChild(img)
-}
-addDealerPicture5 = () => {
-  var img = new Image()
-  img.src = deck[0].img
-  deal5.appendChild(img)
-}
+// addDealerPicture4 = () => {
+//   var img = new Image()
+//   img.src = deck[0].img
+//   deal4.appendChild(img)
+// }
+// addDealerPicture5 = () => {
+//   var img = new Image()
+//   img.src = deck[0].img
+//   deal5.appendChild(img)
+// }
+// const addPlayerPictures = () => {
+//   var img = new Image()
+//   img.src = deck[0].img
+//   playerContainer.appendChild(img)
+// }
+
+// const addDealerPictures = () => {
+//   var img = new Image()
+//   img.src = deck[0].img
+//   dealerContainer.appendChild(img)
+// }
 
 function dealCards() {
   shuffleCards(deck)
@@ -411,14 +434,14 @@ function dealCards() {
   addPlayerPicture1()
   let b = deck.shift()
   playerCards.push(b)
-  addPlayerPicture2()
+  addPlayerPicture1()
   let c = deck.shift()
   dealerCards.push(c)
   addDealerPicture1()
   let d = deck.shift()
   dealerCards.push(d)
   // THIS CARD IS GOING TO BE THE BACK!!!
-  addDealerPicture2()
+  addDealerPicture1()
 }
 
 console.log(playerCards)
