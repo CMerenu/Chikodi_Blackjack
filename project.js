@@ -335,13 +335,13 @@ const deal1 = document.getElementById('dealer-card1')
 if (deal1 && deal1.style) {
   deal1.style.height = '125px'
   deal1.style.width = '100px'
-  deal1.style.background = 'white'
+  // deal1.style.background = 'white'
 }
 const deal2 = document.getElementById('dealer-card2')
 if (deal2 && deal2.style) {
   deal2.style.height = '125px'
   deal2.style.width = '100px'
-  deal2.style.background = 'white'
+  // deal2.style.background = 'white'
 }
 const deal3 = document.getElementById('dealer-card3')
 if (deal3 && deal3.style) {
@@ -349,30 +349,30 @@ if (deal3 && deal3.style) {
   deal3.style.width = '100px'
   // deal3.style.background = 'white'
 }
-const deal4 = document.getElementById('dealer-card4')
-if (deal4 && deal4.style) {
-  deal4.style.height = '125px'
-  deal4.style.width = '100px'
-  // deal4.style.background = 'white'
-}
-const deal5 = document.getElementById('dealer-card5')
-if (deal5 && deal5.style) {
-  deal5.style.height = '125px'
-  deal5.style.width = '100px'
-  // deal5.style.background = 'white'
-}
+// const deal4 = document.getElementById('dealer-card4')
+// if (deal4 && deal4.style) {
+//   deal4.style.height = '125px'
+//   deal4.style.width = '100px'
+//   // deal4.style.background = 'white'
+// }
+// const deal5 = document.getElementById('dealer-card5')
+// if (deal5 && deal5.style) {
+//   deal5.style.height = '125px'
+//   deal5.style.width = '100px'
+//   // deal5.style.background = 'white'
+// }
 
 const play1 = document.getElementById('player-card1')
 if (play1 && play1.style) {
   play1.style.height = '125px'
   play1.style.width = '100px'
-  play1.style.background = 'white'
+  // play1.style.background = 'white'
 }
 const play2 = document.getElementById('player-card2')
 if (play2 && play2.style) {
   play2.style.height = '125px'
   play2.style.width = '100px'
-  play2.style.background = 'white'
+  // play2.style.background = 'white'
 }
 const play3 = document.getElementById('player-card3')
 if (play3 && play3.style) {
@@ -380,18 +380,18 @@ if (play3 && play3.style) {
   play3.style.width = '100px'
   // play3.style.background = 'white'
 }
-const play4 = document.getElementById('player-card4')
-if (play4 && play4.style) {
-  play4.style.height = '125px'
-  play4.style.width = '100px'
-  // play4.style.background = 'white'
-}
-const play5 = document.getElementById('player-card5')
-if (play5 && play5.style) {
-  play5.style.height = '125px'
-  play5.style.width = '100px'
-  // play5.style.background = 'white'
-}
+// const play4 = document.getElementById('player-card4')
+// if (play4 && play4.style) {
+//   play4.style.height = '125px'
+//   play4.style.width = '100px'
+//   // play4.style.background = 'white'
+// }
+// const play5 = document.getElementById('player-card5')
+// if (play5 && play5.style) {
+//   play5.style.height = '125px'
+//   play5.style.width = '100px'
+//   // play5.style.background = 'white'
+// }
 const dealerContainer = document.getElementById('dealer-container')
 const playerContainer = document.getElementById('player-container')
 ////////////////////////////////
@@ -413,22 +413,22 @@ addPlayerPicture2 = () => {
   play2.appendChild(img)
 }
 
-addPlayerPicture3 = () => {
+addPlayerPictureRest = () => {
   var img = new Image()
   img.src = deck[0].img
   play3.appendChild(img)
 }
 
-addPlayerPicture4 = () => {
-  var img = new Image()
-  img.src = deck[0].img
-  play4.appendChild(img)
-}
-addPlayerPicture5 = () => {
-  var img = new Image()
-  img.src = deck[0].img
-  play5.appendChild(img)
-}
+// addPlayerPicture4 = () => {
+//   var img = new Image()
+//   img.src = deck[0].img
+//   play4.appendChild(img)
+// }
+// addPlayerPicture5 = () => {
+//   var img = new Image()
+//   img.src = deck[0].img
+//   play5.appendChild(img)
+// }
 
 addDealerPicture1 = () => {
   var img = new Image()
@@ -441,22 +441,22 @@ addDealerPicture2 = () => {
   img.src = deck[0].img
   deal2.appendChild(img)
 }
-addDealerPicture3 = () => {
+addDealerPictureRest = () => {
   var img = new Image()
   img.src = deck[0].img
   deal3.appendChild(img)
 }
 
-addDealerPicture4 = () => {
-  var img = new Image()
-  img.src = deck[0].img
-  deal4.appendChild(img)
-}
-addDealerPicture5 = () => {
-  var img = new Image()
-  img.src = deck[0].img
-  deal5.appendChild(img)
-}
+// addDealerPicture4 = () => {
+//   var img = new Image()
+//   img.src = deck[0].img
+//   deal4.appendChild(img)
+// }
+// addDealerPicture5 = () => {
+//   var img = new Image()
+//   img.src = deck[0].img
+//   deal5.appendChild(img)
+// }
 
 function dealCards() {
   shuffleCards(deck)
@@ -515,10 +515,12 @@ const sumDealerCards = () => {
 }
 
 function hitCard() {
+  addPlayerPictureRest()
   let e = deck.shift()
   playerCards.push(e)
 }
 function hitDealerCard() {
+  addDealerPictureRest()
   let e = deck.shift()
   dealerCards.push(e)
   console.log(dealerCards.length)
