@@ -20,22 +20,21 @@
 
 - JavaScript
 - HTML
+- CSS
 
 ---
 
 ### **_Getting Started_**
 
-#### Objective
+### **Objective**
 
 ### To beat the dealer by getting a count as close to 21 as possible, without going over 21.
 
-## Game Flow
+### **Game Flow**
 
 ### The player is going to be dealt two cards and will see one of the dealer cards. With each card representing a different value ( A - 1, 2 - 2, 3 - 3, 4 - 4, 5 - 5, 6 - 6, 7 - 7, 8 - 8, 9 - 9, Jack - 10, Queen - 10, King - 10) the player will be given two options, (Hit or stand). When the player hits, they will be dealt an additional card to add to their Total. The player can hit 3 times, bringing his total to 5 cards , but will automatically lose if their total “busts” or hits any number above 21. Once the player choses to stand, the dealer will flip his card thats facing down and then will try to beat the player total by hitting on his own cards. If the dealer busts, the player wins, and if the dealer matches the player's number than it will be a push.(bet will be returned).
 
-## Betting
-
-### The player will start with a set amount of "money", and with that money will choose an amount for them to bet against the dealer. As long as they have money they can keep playing against the dealer and once they run out the game is over and they busted.
+##
 
 #### A Trello band was used to keep track of development progress and can be viewed [Trello](https://trello.com/b/dXkZMBp9/blackjack)
 
@@ -45,16 +44,21 @@
 
 ### **_Screenshots_**
 
-#### **Image Header 1**
+#### **Instruction Screen**
 
-#### ![Image](https://www.math4all.es/wp-content/uploads/2020/10/blackjack-table.jpg)
+#### ![Image](https://trello.com/1/cards/63d405aa079c9c0067511d6e/attachments/63d408665759044dabbff011/previews/63d408685759044dabbff4ce/download/Screen_Shot_2023-01-27_at_11.22.05_AM.png)
+
+#### ![Image]()
 
 ---
 
 ## **Future Updates:**
 
+- [ ] Set Ace value to equal 1 or 11
 - [ ] Betting
 - [ ] Extra options, such as doubling down
+- [ ] Opening Animations and sounds
+- [ ] Insurance for betting
 
 ---
 

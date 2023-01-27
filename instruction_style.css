@@ -22,3 +22,9 @@ h3{
   font-size: 50px;
   font-style: italic;
 }
+.button{
+  font-family: 'Roboto Condensed', sans-serif;
+  opacity: 55%;
+  height: 30px;
+  width: 65px;
+}

@@ -5,7 +5,8 @@ body{
   background-image:url(https://cdn2.softswiss.net/n1casino/b/infin/BlackjackLow.jpg);
   background-size: auto;
   font-family: 'Roboto Condensed', sans-serif;
-  justify-content: center;
+  /* justify-content: center; */
+  /* align-items: center; */
 }
 h1{
   text-align: center;
@@ -33,12 +34,26 @@ font-size: 25px;
 .dealer-container{
   display: flex;
   justify-content: space-between;
-  width: auto;  
+  width: 550px;
+  margin: auto;
+  /* margin-left: 10px;
+  margin-right: 10px; */
 }
 .player-container{
   display:flex;
   justify-content: space-between;
-  width: auto;
+  width: 550px;
+  margin: auto;
+  /* margin-left: 10px;
+  margin-right: px; */
+}
+#dealer-sum{
+  text-align: center;
+}
+#options-container{
+  margin: auto;
+  justify-content: center;
+  text-align: center;
 }
 #dealer-card1{
 /* background-color: white; */
@@ -57,16 +72,6 @@ width: 100px;
 display: flex;
 justify-content: space-between;
 }
-/* #dealer-card4{ */
-  /* background-color: white; */
-/* height: 125px;
-width: 100px;
-}
-#dealer-card5{ */
-  /* background-color: white; */
-/* height: 125px;
-width: 100px;
-} */
 
 
 #player-card1{
@@ -76,35 +81,24 @@ width: 100px;
   }
   
   #player-card2{
-    /* background-color: white; */
-    height: 125px;
-    width: 100px;
-    }
-    #player-card3{
-      /* background-color: white; */
-    height: 125px;
-    width: 100px;
-    display: flex;
-    justify-content: space-between;
-    }
-    #player-card3 img{
-      margin-left: 4px;
-    }
-    #dealer-card3 img{
-      margin-left: 4px;
-    }
-    /* #player-card4{
-      /* background-color: white; */
-    /* height: 125px;
-    width: 100px; */
-    /* } */
-    /* #player-card5{ */
-      /* background-color: white; */
-    /* height: 125px;
-    width: 100px;
-    } */ */
-    
-button{
+  /* background-color: white; */
+  height: 125px;
+  width: 100px;
+  }
+  #player-card3{
+  /* background-color: white; */
+  height: 125px;
+  width: 100px;
+  display: flex;
+  }
+  #player-card3 img{
+  margin-left: 4px;
+  }
+  #dealer-card3 img{
+  margin-left: 4px;
+  }
+
+.button {
   opacity: 55%;
   font-family: 'Roboto Condensed', sans-serif;
   height: 30px;
