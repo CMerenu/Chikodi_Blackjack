@@ -365,14 +365,33 @@ if (deal5 && deal5.style) {
 const play1 = document.getElementById('player-card1')
 if (play1 && play1.style) {
   play1.style.height = '125px'
-  play1.style.width = '200px'
+  play1.style.width = '100px'
   play1.style.background = 'white'
-  play1.style.justifyContent = 'space-between'
 }
-// const play2 = document.getElementById('player-card2')
-// const play3 = document.getElementById('player-card3')
-// const play4 = document.getElementById('player-card4')
-// const play5 = document.getElementById('player-card5')
+const play2 = document.getElementById('player-card2')
+if (play2 && play2.style) {
+  play2.style.height = '125px'
+  play2.style.width = '100px'
+  play2.style.background = 'white'
+}
+const play3 = document.getElementById('player-card3')
+if (play3 && play3.style) {
+  play3.style.height = '125px'
+  play3.style.width = '100px'
+  play3.style.background = 'white'
+}
+const play4 = document.getElementById('player-card4')
+if (play4 && play4.style) {
+  play4.style.height = '125px'
+  play4.style.width = '100px'
+  play4.style.background = 'white'
+}
+const play5 = document.getElementById('player-card5')
+if (play5 && play5.style) {
+  play5.style.height = '125px'
+  play5.style.width = '100px'
+  play5.style.background = 'white'
+}
 const dealerContainer = document.getElementById('dealer-container')
 const playerContainer = document.getElementById('player-container')
 ////////////////////////////////
