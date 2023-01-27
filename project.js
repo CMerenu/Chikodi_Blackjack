@@ -191,7 +191,7 @@ let deck = [
     name: 'Six',
     suit: 'Spades',
     value: 6,
-    img: 'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/spades/spades-r07.svg'
+    img: 'https://raw.githubusercontent.com/NobodysLackey/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/spades/spades-r06.svg'
   },
   {
     name: 'Seven',
@@ -337,15 +337,37 @@ if (deal1 && deal1.style) {
   deal1.style.width = '100px'
   deal1.style.background = 'white'
 }
-// const deal2 = document.getElementById('dealer-card2')
-// const deal3 = document.getElementById('dealer-card3')
-// const deal4 = document.getElementById('dealer-card4')
-// const deal5 = document.getElementById('dealer-card5')
+const deal2 = document.getElementById('dealer-card2')
+if (deal2 && deal2.style) {
+  deal2.style.height = '125px'
+  deal2.style.width = '100px'
+  deal2.style.background = 'white'
+}
+const deal3 = document.getElementById('dealer-card3')
+if (deal3 && deal3.style) {
+  deal3.style.height = '125px'
+  deal3.style.width = '100px'
+  deal3.style.background = 'white'
+}
+const deal4 = document.getElementById('dealer-card4')
+if (deal4 && deal4.style) {
+  deal4.style.height = '125px'
+  deal4.style.width = '100px'
+  deal4.style.background = 'white'
+}
+const deal5 = document.getElementById('dealer-card5')
+if (deal5 && deal5.style) {
+  deal5.style.height = '125px'
+  deal5.style.width = '100px'
+  deal5.style.background = 'white'
+}
+
 const play1 = document.getElementById('player-card1')
 if (play1 && play1.style) {
   play1.style.height = '125px'
-  play1.style.width = '100px'
+  play1.style.width = '200px'
   play1.style.background = 'white'
+  play1.style.justifyContent = 'space-between'
 }
 // const play2 = document.getElementById('player-card2')
 // const play3 = document.getElementById('player-card3')
@@ -442,10 +464,11 @@ function dealCards() {
   dealerCards.push(d)
   // THIS CARD IS GOING TO BE THE BACK!!!
   addDealerPicture1()
+  console.log(deck)
 }
 
-console.log(playerCards)
 console.log(dealerCards)
+console.log(playerCards)
 
 function putImg() {}
 
