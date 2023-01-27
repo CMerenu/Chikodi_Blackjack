@@ -1,4 +1,22 @@
 body{
   background-image:url(https://cdn2.softswiss.net/n1casino/b/infin/BlackjackLow.jpg);
   background-size: auto;
+  color: white;
+  
+}
+p{
+  color: White;
+  font-size: 18px;
+}
+div{
+  display: block;
+  text-align: center;
+  align-items: center;
+  margin: 15px 325px 15px 275px;
+}
+h1{
+  font-size: 150px;
+}
+h3{
+  font-size: 50px;
 }
