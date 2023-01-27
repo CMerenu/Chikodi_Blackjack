@@ -438,7 +438,9 @@ addDealerPicture1 = () => {
 
 addDealerPicture2 = () => {
   var img = new Image()
-  img.src = deck[0].img
+  img.src =
+    'https://raw.githubusercontent.com/NobodysLackey/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/backs/red.svg'
+  img.setAttribute('id', 'dealercard2')
   deal2.appendChild(img)
 }
 addDealerPictureRest = () => {
@@ -447,6 +449,13 @@ addDealerPictureRest = () => {
   deal3.appendChild(img)
 }
 
+revealDealerPicture2 = () => {
+  document.getElementById('dealercard2').src = dealerCards[1].img
+  // dc2.parentNode.removeChild(img)
+  // var img = new Image()
+  // img.src = dealerCards[1].img
+  // deal2.appendChild(img)
+}
 // addDealerPicture4 = () => {
 //   var img = new Image()
 //   img.src = deck[0].img
@@ -503,7 +512,7 @@ const sumDealerCards = () => {
     for (let i = 0; i < dealerCards.length; i++) {
       dealerScore += dealerCards[i].value
     }
-    dealerSum.innerText = dealerScore
+    // dealerSum.innerText = dealerScore
   } else {
     console.log(dealerScore)
     let dealerRecentCard = dealerCards.slice(-1)
@@ -552,6 +561,7 @@ const checkWinner = () => {
 function checkDealerWinner() {
   while (dealerScore < playerScore) {
     hitDealerCard()
+    dealerSum.innerText = dealerScore
   }
   // if (dealerScore < playerScore) {
   // hitDealerCard()
@@ -588,6 +598,7 @@ hitMe.addEventListener('click', () => {
   checkWinner()
 })
 stay.addEventListener('click', () => {
+  revealDealerPicture2()
   checkDealerWinner()
   // sumDealerCards()
   hitMe.classList.add('disableclick')

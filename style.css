@@ -5,7 +5,7 @@ body{
   background-image:url(https://cdn2.softswiss.net/n1casino/b/infin/BlackjackLow.jpg);
   background-size: auto;
   font-family: 'Roboto Condensed', sans-serif;
-  align-items: center;
+  justify-content: center;
 }
 h1{
   text-align: center;
@@ -14,30 +14,31 @@ h1{
 }
 
 #dealer-sum{
-color: red;
+color: white;
 font-size: 35px;
+height: 50px;
 }
 #player-sum{
 color: white;
 font-size: 35px;
 }
 #player-status{
-  color: blue;
+  color: white;
   font-size: 25px;
 }
 #options{
-  color: lightgreen;
+  color: white;
 font-size: 25px;
 }
 .dealer-container{
   display: flex;
   justify-content: space-between;
-  width: 800px;  
+  width: auto;  
 }
 .player-container{
-  display: flex;
+  display:flex;
   justify-content: space-between;
-  width: 800px;
+  width: auto;
 }
 #dealer-card1{
 /* background-color: white; */
@@ -53,17 +54,19 @@ width: 100px;
   /* background-color: white; */
 height: 125px;
 width: 100px;
+display: flex;
+justify-content: space-between;
 }
-#dealer-card4{
+/* #dealer-card4{ */
   /* background-color: white; */
-height: 125px;
+/* height: 125px;
 width: 100px;
 }
-#dealer-card5{
+#dealer-card5{ */
   /* background-color: white; */
-height: 125px;
+/* height: 125px;
 width: 100px;
-}
+} */
 
 
 #player-card1{
@@ -81,17 +84,25 @@ width: 100px;
       /* background-color: white; */
     height: 125px;
     width: 100px;
+    display: flex;
+    justify-content: space-between;
     }
-    #player-card4{
+    #player-card3 img{
+      margin-left: 4px;
+    }
+    #dealer-card3 img{
+      margin-left: 4px;
+    }
+    /* #player-card4{
       /* background-color: white; */
-    height: 125px;
-    width: 100px;
-    }
-    #player-card5{
+    /* height: 125px;
+    width: 100px; */
+    /* } */
+    /* #player-card5{ */
       /* background-color: white; */
-    height: 125px;
+    /* height: 125px;
     width: 100px;
-    }
+    } */ */
     
 button{
   opacity: 55%;
