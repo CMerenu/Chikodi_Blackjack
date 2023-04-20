@@ -4,7 +4,7 @@ let deck = [
   {
     name: 'Ace',
     suit: 'Hearts',
-    value: 1,
+    value: 11,
     img: 'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/hearts/hearts-A.svg'
   },
   {
@@ -82,7 +82,7 @@ let deck = [
   {
     name: 'Ace',
     suit: 'Diamonds',
-    value: 1,
+    value: 11,
     img: 'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/diamonds/diamonds-A.svg'
   },
   {
@@ -160,7 +160,7 @@ let deck = [
   {
     name: 'Ace',
     suit: 'Spades',
-    value: 1,
+    value: 11,
     img: 'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/spades/spades-A.svg'
   },
   {
@@ -238,7 +238,7 @@ let deck = [
   {
     name: 'Ace',
     suit: 'Clubs',
-    value: 1,
+    value: 11,
     img: 'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/clubs/clubs-A.svg'
   },
   {
@@ -349,18 +349,6 @@ if (deal3 && deal3.style) {
   deal3.style.width = '100px'
   // deal3.style.background = 'white'
 }
-// const deal4 = document.getElementById('dealer-card4')
-// if (deal4 && deal4.style) {
-//   deal4.style.height = '125px'
-//   deal4.style.width = '100px'
-//   // deal4.style.background = 'white'
-// }
-// const deal5 = document.getElementById('dealer-card5')
-// if (deal5 && deal5.style) {
-//   deal5.style.height = '125px'
-//   deal5.style.width = '100px'
-//   // deal5.style.background = 'white'
-// }
 
 const play1 = document.getElementById('player-card1')
 if (play1 && play1.style) {
@@ -378,20 +366,8 @@ const play3 = document.getElementById('player-card3')
 if (play3 && play3.style) {
   play3.style.height = '125px'
   play3.style.width = '100px'
-  // play3.style.background = 'white'
 }
-// const play4 = document.getElementById('player-card4')
-// if (play4 && play4.style) {
-//   play4.style.height = '125px'
-//   play4.style.width = '100px'
-//   // play4.style.background = 'white'
-// }
-// const play5 = document.getElementById('player-card5')
-// if (play5 && play5.style) {
-//   play5.style.height = '125px'
-//   play5.style.width = '100px'
-//   // play5.style.background = 'white'
-// }
+
 const dealerContainer = document.getElementById('dealer-container')
 const playerContainer = document.getElementById('player-container')
 ////////////////////////////////
@@ -419,17 +395,6 @@ addPlayerPictureRest = () => {
   play3.appendChild(img)
 }
 
-// addPlayerPicture4 = () => {
-//   var img = new Image()
-//   img.src = deck[0].img
-//   play4.appendChild(img)
-// }
-// addPlayerPicture5 = () => {
-//   var img = new Image()
-//   img.src = deck[0].img
-//   play5.appendChild(img)
-// }
-
 addDealerPicture1 = () => {
   var img = new Image()
   img.src = deck[0].img
@@ -451,21 +416,7 @@ addDealerPictureRest = () => {
 
 revealDealerPicture2 = () => {
   document.getElementById('dealercard2').src = dealerCards[1].img
-  // dc2.parentNode.removeChild(img)
-  // var img = new Image()
-  // img.src = dealerCards[1].img
-  // deal2.appendChild(img)
 }
-// addDealerPicture4 = () => {
-//   var img = new Image()
-//   img.src = deck[0].img
-//   deal4.appendChild(img)
-// }
-// addDealerPicture5 = () => {
-//   var img = new Image()
-//   img.src = deck[0].img
-//   deal5.appendChild(img)
-// }
 
 function dealCards() {
   shuffleCards(deck)
@@ -481,15 +432,22 @@ function dealCards() {
   addDealerPicture2()
   let d = deck.shift()
   dealerCards.push(d)
-  // THIS CARD IS GOING TO BE THE BACK!!!
   console.log(deck)
 }
 
 console.log(dealerCards)
 console.log(playerCards)
 
+function checkPlayerCardsValue() {
+  for (let i = 0; i < playerCards.length; i++)
+    if (playerScore > 21 && playerCards[i].name === 'Ace') {
+      playerCards[i].value = 1
+    } else {
+      playerCards = playerCards
+    }
+}
+
 const sumPlayerCards = () => {
-  // let playerScore = 0
   if (playerCards.length === 2) {
     for (let i = 0; i < playerCards.length; i++) {
       playerScore += playerCards[i].value
@@ -499,11 +457,7 @@ const sumPlayerCards = () => {
     let recentCard = playerCards.slice(-1)
     playerScore += recentCard[0].value
     playerSum.innerText = playerScore
-    // console.log(recentCard)
   }
-  // playerSum.innerText = playerScore
-  // console.log(playerScore, 'playerScore')
-  // checkWinner()
 }
 
 const sumDealerCards = () => {
@@ -512,14 +466,12 @@ const sumDealerCards = () => {
     for (let i = 0; i < dealerCards.length; i++) {
       dealerScore += dealerCards[i].value
     }
-    // dealerSum.innerText = dealerScore
   } else {
     console.log(dealerScore)
     let dealerRecentCard = dealerCards.slice(-1)
     console.log(dealerRecentCard)
     dealerScore += dealerRecentCard[0].value
     dealerSum.innerText = dealerScore
-    // console.log(dealerRecentCard)
   }
 }
 
@@ -563,8 +515,6 @@ function checkDealerWinner() {
     hitDealerCard()
     dealerSum.innerText = dealerScore
   }
-  // if (dealerScore < playerScore) {
-  // hitDealerCard()
   if (dealerScore > playerScore && dealerScore < 21) {
     playerStatus.innerText = 'Dealer Win!'
     options.innerText = 'Better luck next time!'
@@ -579,30 +529,26 @@ function checkDealerWinner() {
     options.innerText = 'Dealer and Player Wins'
   }
 }
-// // const restartGame(){
-// }
+
 // ////////////////////////////////
 // Event Listeners Here
 startGame.addEventListener('click', () => {
   dealCards()
   sumPlayerCards()
   sumDealerCards()
-  // console.log(sumPlayerCards())
-  // console.log(sumDealerCards())
+  checkPlayerCardsValue()
+
   checkWinner()
   startGame.classList.add('disableclick')
 })
 hitMe.addEventListener('click', () => {
   hitCard()
+  checkPlayerCardsValue()
   sumPlayerCards()
   checkWinner()
 })
 stay.addEventListener('click', () => {
   revealDealerPicture2()
   checkDealerWinner()
-  // sumDealerCards()
   hitMe.classList.add('disableclick')
 })
-// restartGame.addEventListener('click', () => {
-//   location.reload()
-// })

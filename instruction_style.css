@@ -1,8 +1,17 @@
 body{
-  background-image:url(https://cdn2.softswiss.net/n1casino/b/infin/BlackjackLow.jpg);
-  background-size: auto;
+  /* background-image:url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.policy-impact.eu%2Fwp-content%2Fuploads%2F2018%2F05%2FBlackjack.jpg&f=1&nofb=1&ipt=f0cc57e2f70f64b79585f28a3a105f8efcd7318eb6c8bedc5cd92b8febb6d4ac&ipo=images); */
+  /* background-size: cover; */
+  /* background-repeat: no-repeat; */
+  background-color: green;
   color: white;
-  
+  height: 716px;
+}
+.bg{
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 p{
   color: White;
@@ -16,15 +25,25 @@ div{
   font-family: 'Roboto Condensed', sans-serif;
 }
 h1{
-  font-size: 150px;
+  font-size: 100px;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: center;
+
 }
 h3{
   font-size: 50px;
   font-style: italic;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: center;
+  text-shadow: 2pc;
+
 }
 .button{
   font-family: 'Roboto Condensed', sans-serif;
   opacity: 55%;
   height: 30px;
-  width: 65px;
+  width: 75px;
+}
+svg:hover {
+  fill: white;
 }
