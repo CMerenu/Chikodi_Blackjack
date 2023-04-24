@@ -2,8 +2,9 @@
   pointer-events: none;
 }
 body{
-  background-image:url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftabletcasinos.ca%2Fwp-content%2Fuploads%2F2016%2F04%2Fnew-casino-game.jpg&f=1&nofb=1&ipt=1b629170b5082b9a4c4a91ff7bd63e0a3a25b68c2e490b6566e27b098d5ac33f&ipo=images);
+  /* background-image:url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftabletcasinos.ca%2Fwp-content%2Fuploads%2F2016%2F04%2Fnew-casino-game.jpg&f=1&nofb=1&ipt=1b629170b5082b9a4c4a91ff7bd63e0a3a25b68c2e490b6566e27b098d5ac33f&ipo=images); */
   /* background-size: auto; */
+  background-color: goldenrod;
   font-family: 'Roboto Condensed', sans-serif;
   background-size: cover;
   height: 950px;
@@ -58,40 +59,13 @@ font-size: 25px;
   justify-content: center;
   text-align: center;
 }
-#dealer-card1{
-/* background-color: white; */
-height: 125px;
-width: 100px;
-}
-#dealer-card2{
-/* background-color: white; */
-height: 125px;
-width: 100px;
-}
+
 #dealer-card3{
-  /* background-color: white; */
-height: 125px;
-width: 100px;
 display: flex;
 justify-content: space-between;
 }
 
-
-#player-card1{
-  /* background-color: white; */
-  height: 125px;
-  width: 100px;
-  }
-  
-  #player-card2{
-  /* background-color: white; */
-  height: 125px;
-  width: 100px;
-  }
   #player-card3{
-  /* background-color: white; */
-  height: 125px;
-  width: 100px;
   display: flex;
   }
   #player-card3 img{
@@ -108,9 +82,32 @@ justify-content: space-between;
   width: 75px;
   /* color: ; */
 }
-
+.card{
+  border-radius: 10%;
+  margin-right: 5px;
+  float: left;
+  height: 125px;
+  width: 100px;
+  /* background-color: white; */
+}
 .card img{
+  border: .1em solid black;
   height: 125px;
   width: 100px;
   background-color: white;
+  border-radius: 10%;
+}
+.table {
+  background-color: green;
+  height: 550px;
+  width: 90%;
+  border-radius: 50%;
+  margin: 0 auto;
+  border: 1em solid black;
+}
+
+.board {
+  position: relative;
+  top: 25%;
+  /* left: 30%; */
 }

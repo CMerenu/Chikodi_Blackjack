@@ -314,18 +314,37 @@ let deck = [
     img: 'https://raw.githubusercontent.com/CMerenu/card-deck/a9f7f7f02464f3720273ce00263357ef1c4b5cbf/images/clubs/clubs-K.svg'
   }
 ]
-console.log(deck)
+// console.log(deck)
 
 let playerCards = []
 let dealerCards = []
 let playerScore = 0
 let dealerScore = 0
+let pSum = 0
+let pCash = 0
+let bet = 0
+let buyIn = 0
+let dSum = 0
+let playerAceCount = 0
+let dealerAceCount = 0
+let hidden = 0
+let wins = 0
+let losses = 0
+let draws = 0
 const dealerSum = document.getElementById('dealer-sum')
 const playerSum = document.getElementById('player-sum')
 const playerStatus = document.getElementById('player-status')
 const options = document.getElementById('options')
 const startGame = document.getElementById('start')
 const hitMe = document.getElementById('hit')
+let playerCash = document.getElementById('player-cash')
+let betInput = document.getElementById('bet-input')
+let betAmt = document.getElementById('bet-amt')
+let profit = document.getElementById('profit')
+let betUI = document.getElementById('betting')
+let winCount = document.getElementById('wins')
+let lossCount = document.getElementById('losses')
+let drawCount = document.getElementById('draws')
 const restartGame = document.getElementById('restart')
 restartGame.addEventListener('click', () => {
   location.reload()
@@ -347,20 +366,17 @@ const deal3 = document.getElementById('dealer-card3')
 if (deal3 && deal3.style) {
   deal3.style.height = '125px'
   deal3.style.width = '100px'
-  // deal3.style.background = 'white'
 }
 
 const play1 = document.getElementById('player-card1')
 if (play1 && play1.style) {
   play1.style.height = '125px'
   play1.style.width = '100px'
-  // play1.style.background = 'white'
 }
 const play2 = document.getElementById('player-card2')
 if (play2 && play2.style) {
   play2.style.height = '125px'
   play2.style.width = '100px'
-  // play2.style.background = 'white'
 }
 const play3 = document.getElementById('player-card3')
 if (play3 && play3.style) {
@@ -370,6 +386,7 @@ if (play3 && play3.style) {
 
 const dealerContainer = document.getElementById('dealer-container')
 const playerContainer = document.getElementById('player-container')
+
 ////////////////////////////////
 // Functions For Game Logic Here
 
@@ -432,11 +449,38 @@ function dealCards() {
   addDealerPicture2()
   let d = deck.shift()
   dealerCards.push(d)
-  console.log(deck)
+  // console.log(deck)
 }
 
 console.log(dealerCards)
 console.log(playerCards)
+
+// function checkWinCount() {
+//   for (let i = 0; i < playerCards.length; i++)
+//     if (playerScore > 21 && playerCards[i].name === 'Ace') {
+//       playerCards[i].value = 1
+//     } else {
+//       playerCards = playerCards
+//     }
+// }
+
+function win() {
+  wins++
+  winCount.textContent = wins
+}
+
+function loss() {
+  losses++
+  lossCount.textContent = losses
+}
+function draw() {
+  draws++
+  drawCount.textContent = draws
+}
+
+console.log(wins)
+console.log(losses)
+console.log(draws)
 
 function checkPlayerCardsValue() {
   for (let i = 0; i < playerCards.length; i++)
@@ -495,18 +539,22 @@ const checkWinner = () => {
   if (playerScore === 21) {
     playerStatus.innerText = 'Blackjack!'
     options.innerText = 'You Win!'
+    win()
   } else if (dealerScore === 21 && playerScore < 21) {
     playerStatus.innerText = 'Dealer Win!'
     options.innerText = 'Better luck next time!'
+    loss()
   } else if (playerScore === dealerScore) {
     playerStatus.innerText = ' Push!'
     options.innerText = 'Dealer and Player Wins'
+    draw()
   } else if (playerScore < 21) {
     playerStatus.innerText = 'What do you want to do?'
     options.innerText = 'Hit or Stay!'
   } else if (playerScore > 21) {
     playerStatus.innerText = "You've Busted!"
     options.innerText = 'Better luck next time!'
+    loss()
   }
 }
 
@@ -518,18 +566,23 @@ function checkDealerWinner() {
   if (dealerScore > playerScore && dealerScore < 21) {
     playerStatus.innerText = 'Dealer Win!'
     options.innerText = 'Better luck next time!'
+    loss()
   } else if (dealerScore === 21) {
     playerStatus.innerText = 'Dealer Blackjack'
     options.innerText = 'Better luck next time!'
+    loss()
   } else if (dealerScore > 21) {
     playerStatus.innerText = 'Dealer Busted'
     options.innerText = 'You Win!'
+    win()
   } else if (dealerScore === playerScore) {
     playerStatus.innerText = ' Push!'
     options.innerText = 'Dealer and Player Wins'
+    draw()
   }
 }
 
+console.log(winCount)
 // ////////////////////////////////
 // Event Listeners Here
 startGame.addEventListener('click', () => {

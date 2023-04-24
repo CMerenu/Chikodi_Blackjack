@@ -12,32 +12,55 @@
 </head>
 <body>
   <h1>Blackjack</h1>
-  <div class= "dealer-container">
-    <div id="dealer-card1" class="card"></div>
-    <div id="dealer-card2" class="card"></div>
-    <div id="dealer-card3" class="card"></div>
-    <div id="dealer-card4" class="card"></div>
-    <div id="dealer-card5" class="card"></div>
-  </div>
-  <div id="dealer-sum"> </div>
-  <div class = "player-container">
-    <div id="player-card1" class="card"></div>
-    <div id="player-card2" class="card"></div>
-    <div id="player-card3" class="card"></div>
-    <div id="player-card4" class="card"></div>
-    <div id="player-card5" class="card"></div> 
-  </div>
-  <div id = "options-container">
-    <div id="player-sum"></div>
-    <div id="player-status"></div>
-    <div id="options"></div>
-    <button class = 'button' id="start">Start Game</button>
-    <button class = 'button' id="hit">Hit Me!</button>
-    <button class = 'button' id="stay">Stay!</button>
-    <button class = 'button' id="restart">Restart</button>
-    <a href="./index.html">
-      <button class = 'button' id="How to">Play!</button>
-    </a>
+  <div>
+
+    <div class="table">
+      <div class="board">
+        <div class= "dealer-container">
+          <div id="dealer-card1" class="card"></div>
+          <div id="dealer-card2" class="card"></div>
+          <div id="dealer-card3" class="card"></div>
+          <div id="dealer-card4" class="card"></div>
+          <div id="dealer-card5" class="card"></div>
+        </div>
+        <div id="dealer-sum"> </div>
+        <div class = "player-container">
+          <div id="player-card1" class="card"></div>
+          <div id="player-card2" class="card"></div>
+          <div id="player-card3" class="card"></div>
+          <div id="player-card4" class="card"></div>
+          <div id="player-card5" class="card"></div> 
+        </div>
+      </div>
+    </div>
+    <div id = "options-container">
+      <div id="player-sum"></div>
+      <div id="player-status"></div>
+      <div id="options"></div>
+      <button class = 'button' id="start">Start Game</button>
+      <button class = 'button' id="hit">Hit Me!</button>
+      <button class = 'button' id="stay">Stay!</button>
+      <button class = 'button' id="restart">Restart</button>
+      <a href="./index.html">
+        <button class = 'button' id="How to">Play!</button>
+      </a>
+    </div>
+    <div>
+      <div id="outComes">
+        <h2>Round Outcomes</h2>
+        <h4>Wins: <span id="wins"></span></h4>
+        <h4>Losses: <span id="losses"></span></h4>
+        <h4>Draws: <span id="draws"></span></h4>
+      </div>
+      <div id="betting">
+        <h2>Betting</h2>
+        <h4>Current Cash: <span id="player-cash">$0.00</span></h4>
+        <h4>Profit: $<span id="profit">0.00</span></h4>
+        <input type="number" placeholder="Enter bet" id="bet-input">
+        <!--     <button id="set-bet">place</button> -->
+        <h2>Bet Amount: <span id="bet-amt">$0.00</span></h2>
+      </div>
+    </div>
   </div>
 </body>
 <script src="project.js" charset="utf-8"></script>
