@@ -26,17 +26,21 @@ height: 50px;
 #player-sum{
 color: white;
 font-size: 45px;
+text-align: end;
 }
 #player-status{
   color: white;
   font-size: 25px;
+  text-align: end;
 }
 #options{
   color: white;
   font-size: 25px;
+  text-align: end;
 }
 #options-container{
   margin-top: 100px;
+  margin: auto;
 }
 .dealer-container{
   display: flex;
@@ -105,14 +109,16 @@ justify-content: space-between;
   height: 550px;
   width: 90%;
   border-radius: 50%;
-  margin: 0 auto;
+  margin: 15px auto;
   border: 1em solid black;
+  display: flex;
 }
 
 .board {
   position: relative;
   top: 25%;
   /* left: 30%; */
+  margin: 0 auto;
 }
 #outComes{
   text-align: left;
@@ -124,4 +130,7 @@ justify-content: space-between;
 }
 #parent{
   display: flex;
+}
+button:hover {
+  scale: 120%;
 }

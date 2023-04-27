@@ -479,7 +479,7 @@ console.log(draws)
 function checkPlayerCardsValue() {
   for (let i = 0; i < playerCards.length; i++)
     if (playerScore > 21 && playerCards[i].name === 'Ace') {
-      playerCards[i].value = 1
+      playerCards
     } else {
       playerCards = playerCards
     }
@@ -501,15 +501,51 @@ function newRound() {
   pushPlayerCards()
   shuffleCards()
   console.log(deck)
-  // console.log(dealerCards)
-  // console.log(playerCards)
-  // console.log(dealerScore)
-  // console.log(playerScore)
 }
+
+// function getValue(value) {
+//   if (isNaN(value)) {
+//     if (value == 'A') {
+//       return 11
+//     } else {
+//       return 10
+//     }
+//   }
+//   return value
+// }
+
+// function checkAce(card) {
+//   if (card == 'Ace') {
+//     return 1
+//   } else {
+//     return 0
+//   }
+// }
+
+// function reduceAce(sum, aceCount) {
+//   while (sum > 21 && aceCount > 0) {
+//     sum -= 10
+//     aceCount--
+//   }
+//   return sum
+// }
 
 console.log(dealerCards)
 console.log(playerCards)
-console.log(deck)
+// console.log(deck)
+
+// const sumPlayerCards = () => {
+//   if (playerCards.length === 2) {
+//     for (let i = 0; i < playerCards.length; i++) {
+//       playerScore += playerCards[i].value
+//     }
+//     playerSum.innerText = playerScore
+//   } else {
+//     let recentCard = playerCards.slice(-1)
+//     playerScore += recentCard[0].value
+//     playerSum.innerText = playerScore
+//   }
+// }
 
 const sumPlayerCards = () => {
   if (playerCards.length === 2) {
@@ -517,6 +553,11 @@ const sumPlayerCards = () => {
       playerScore += playerCards[i].value
     }
     playerSum.innerText = playerScore
+  } else if (
+    playerCards.length >= 2 &&
+    playerCards.find((e) => e.Name === 'Ace')
+  ) {
+    console.log('ACE is here')
   } else {
     let recentCard = playerCards.slice(-1)
     playerScore += recentCard[0].value
