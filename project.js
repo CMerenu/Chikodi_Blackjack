@@ -345,10 +345,14 @@ let betUI = document.getElementById('betting')
 let winCount = document.getElementById('wins')
 let lossCount = document.getElementById('losses')
 let drawCount = document.getElementById('draws')
-const restartGame = document.getElementById('restart')
-restartGame.addEventListener('click', () => {
-  location.reload()
+const nextRound = document.getElementById('newRound')
+nextRound.addEventListener('click', () => {
+  newRound()
 })
+// const restartGame = document.getElementById('restart')
+// restartGame.addEventListener('click', () => {
+//   location.reload()
+// })
 const stay = document.getElementById('stay')
 const deal1 = document.getElementById('dealer-card1')
 if (deal1 && deal1.style) {
@@ -449,20 +453,10 @@ function dealCards() {
   addDealerPicture2()
   let d = deck.shift()
   dealerCards.push(d)
-  // console.log(deck)
 }
 
 console.log(dealerCards)
 console.log(playerCards)
-
-// function checkWinCount() {
-//   for (let i = 0; i < playerCards.length; i++)
-//     if (playerScore > 21 && playerCards[i].name === 'Ace') {
-//       playerCards[i].value = 1
-//     } else {
-//       playerCards = playerCards
-//     }
-// }
 
 function win() {
   wins++
@@ -490,6 +484,32 @@ function checkPlayerCardsValue() {
       playerCards = playerCards
     }
 }
+
+function pushDealerCards() {
+  for (let i = 0; i < dealerCards.length; i++) {
+    deck.push(dealerCards[i])
+  }
+}
+function pushPlayerCards() {
+  for (let i = 0; i < playerCards.length; i++) {
+    deck.push(playerCards[i])
+  }
+}
+
+function newRound() {
+  pushDealerCards()
+  pushPlayerCards()
+  shuffleCards()
+  console.log(deck)
+  // console.log(dealerCards)
+  // console.log(playerCards)
+  // console.log(dealerScore)
+  // console.log(playerScore)
+}
+
+console.log(dealerCards)
+console.log(playerCards)
+console.log(deck)
 
 const sumPlayerCards = () => {
   if (playerCards.length === 2) {
@@ -523,6 +543,7 @@ function hitCard() {
   addPlayerPictureRest()
   let e = deck.shift()
   playerCards.push(e)
+  console.log(deck)
 }
 function hitDealerCard() {
   addDealerPictureRest()
@@ -582,7 +603,6 @@ function checkDealerWinner() {
   }
 }
 
-console.log(winCount)
 // ////////////////////////////////
 // Event Listeners Here
 startGame.addEventListener('click', () => {
@@ -590,7 +610,6 @@ startGame.addEventListener('click', () => {
   sumPlayerCards()
   sumDealerCards()
   checkPlayerCardsValue()
-
   checkWinner()
   startGame.classList.add('disableclick')
 })

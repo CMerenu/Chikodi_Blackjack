@@ -33,7 +33,10 @@ font-size: 45px;
 }
 #options{
   color: white;
-font-size: 25px;
+  font-size: 25px;
+}
+#options-container{
+  margin-top: 100px;
 }
 .dealer-container{
   display: flex;
@@ -110,4 +113,10 @@ justify-content: space-between;
   position: relative;
   top: 25%;
   /* left: 30%; */
+}
+#outComes{
+  text-align: center;
+}
+#betting{
+  text-align: center;
 }
